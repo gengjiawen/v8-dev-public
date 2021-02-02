@@ -9,8 +9,22 @@ jobs:
       - checkout
       - run: npx envinfo
       - run: docker-compose up -d
+  arm64-build:
+    docker:
+      - image: gengjiawen/node-builds
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+      - run: npx envinfo
+      - run:
+          command: |
+            cd ~/v8
+            node ~/repo/v8gen.js
+
 
 workflows:
   test-ci:
     jobs:
       - js-test
+      - arm64-build
