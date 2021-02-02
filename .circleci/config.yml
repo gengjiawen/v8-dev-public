@@ -20,8 +20,8 @@ jobs:
       - run:
           command: |
             cd ~/v8
-            node ~/repo/v8gen.js
             git checkout origin/lkgr
+            node ~/repo/v8gen.js
             time ninja -C out/arm64.release/
 
 
