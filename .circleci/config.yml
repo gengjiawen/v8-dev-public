@@ -21,6 +21,8 @@ jobs:
           command: |
             cd ~/v8
             node ~/repo/v8gen.js
+            git checkout origin/lkgr
+            time ninja -C out/arm64.release/
 
 
 workflows:
