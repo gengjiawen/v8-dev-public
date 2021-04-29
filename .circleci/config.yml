@@ -22,6 +22,8 @@ jobs:
             git checkout origin/lkgr
             node ~/repo/v8gen.js
             time ninja -C out/arm64.release/
+      - store_artifacts:
+          path: out/arm64.release/
 
 
 workflows:
