@@ -8,12 +8,11 @@ jobs:
     steps:
       - checkout
       - run: npx envinfo
-      - run: docker-compose up -d
+
   arm64-build:
     docker:
       - image: gengjiawen/v8-build
     working_directory: ~/repo
-
     steps:
       - checkout
       - run: npx envinfo
