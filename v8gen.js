@@ -24,6 +24,7 @@ const execCmd = cmd => {
     const out = execSync(cmd)
     console.log(out.toString())
   } catch (error) {
+    console.error(error.stdout.toString())
     console.error(error.stderr.toString())
   }
 }
