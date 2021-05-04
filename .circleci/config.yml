@@ -30,4 +30,4 @@ workflows:
   test-ci:
     jobs:
       - js-test
-      - arm64-build
+      # - arm64-build
