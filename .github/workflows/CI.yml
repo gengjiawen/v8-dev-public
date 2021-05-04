@@ -3,14 +3,14 @@ name: CI
 on: [push, pull_request]
 
 jobs:
-  build-android:
+  build-arm64:
     runs-on: ubuntu-latest
-    container: gengjiawen/v8-build
+    container: gengjiawen/v8-build:arm64
     steps:
       - uses: actions/checkout@v2
       - name: Build arm64
         run: |
-            cd ~/v8
+            cd /root/v8
             git checkout origin/lkgr
-            node ~/repo/v8gen.js
+            node $GITHUB_WORKSPACE/v8gen.js
             time ninja -C out/arm64.release/
