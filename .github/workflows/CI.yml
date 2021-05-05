@@ -3,7 +3,7 @@ name: CI
 on: [push, pull_request]
 
 jobs:
-  build-arm64:
+  build-linux-arm64:
     runs-on: ubuntu-latest
     container: gengjiawen/v8-build:arm64
     steps:
@@ -16,5 +16,5 @@ jobs:
           time ninja -C out/arm64.release/
       - uses: actions/upload-artifact@v2
         with:
-          name: v8-arm6
+          name: v8-arm64
           path: /root/v8/out/arm64.release/
