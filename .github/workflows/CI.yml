@@ -17,4 +17,6 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: v8-arm64
-          path: /root/v8/out/arm64.release/
+          path: |
+            /root/v8/out/arm64.release/
+            /root/v8/include
