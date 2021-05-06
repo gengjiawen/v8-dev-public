@@ -20,3 +20,21 @@ jobs:
           path: |
             /root/v8/out/arm64.release/
             /root/v8/include
+
+  build-linux-x64:
+    runs-on: ubuntu-latest
+    container: gengjiawen/v8-build
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build x64
+        run: |
+          cd /root/v8
+          git checkout origin/lkgr
+          node $GITHUB_WORKSPACE/v8gen.js
+          time ninja -C out/x64.release/
+      - uses: actions/upload-artifact@v2
+        with:
+          name: v8-x64
+          path: |
+            /root/v8/out/x64.release/
+            /root/v8/include
