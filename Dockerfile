@@ -5,6 +5,4 @@ FROM gitpod/workspace-wasm
 # RUN brew install bastet
 #
 # More information: https://www.gitpod.io/docs/config-docker/
-RUN sudo apt-get update \
- && sudo apt-get install -y \
-  fish 
+
