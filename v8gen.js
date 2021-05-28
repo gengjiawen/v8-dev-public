@@ -13,11 +13,7 @@ use_custom_libcxx = false
 v8_static_library = true
 v8_monolithic = true
 use_goma = false
-goma_dir = "None"
-v8_enable_backtrace = true
-v8_enable_disassembler = true
-v8_enable_object_print = true
-v8_enable_verify_heap = true'
+'
 `
 }
 
