@@ -11,7 +11,7 @@ jobs:
       - name: Build arm64
         run: |
           cd /root/v8
-          git checkout -t origin/8.8-lkgr
+          git checkout -t origin/9.1-lkgr
           cd build && git reset --hard && cd /root/v8
           gclient sync
           node $GITHUB_WORKSPACE/v8gen.js
@@ -31,7 +31,7 @@ jobs:
       - name: Build x64
         run: |
           cd /root/v8
-          git checkout origin/8.8-lkgr
+          git checkout origin/9.1-lkgr
           cd build && git reset --hard && cd /root/v8
           gclient sync
           node $GITHUB_WORKSPACE/v8gen.js
