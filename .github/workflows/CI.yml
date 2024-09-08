@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     container: gengjiawen/v8-build:arm64
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Build arm64
         run: |
           cd /root/v8
@@ -27,7 +27,7 @@ jobs:
     runs-on: ubuntu-latest
     container: gengjiawen/v8-build
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Build x64
         run: |
           cd /root/v8
